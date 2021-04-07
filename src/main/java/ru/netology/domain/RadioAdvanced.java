@@ -56,10 +56,10 @@ public class RadioAdvanced {
         if (currentRadioStation == minRadioStation - 1) {
             currentRadioStation = maxRadioStation;
         }
-        if (currentRadioStation < maxRadioStation) {
+        if (currentRadioStation > maxRadioStation) {
             currentRadioStation = currentRadioStation + 1;
         }
-        if (currentRadioStation > minRadioStation) {
+        if (currentRadioStation < minRadioStation) {
             currentRadioStation = currentRadioStation + 1;
         }
 
