@@ -82,10 +82,10 @@ public class RadioTest {
         fm.setMinRadioStation(0);
         fm.setMaxRadioStation(9);
 
-        fm.setCurrentRadioStation(7);
+        fm.setCurrentRadioStation(8);
         fm.prevCurrentStation();
 
-        assertEquals(6, fm.getCurrentRadioStation());
+        assertEquals(7, fm.getCurrentRadioStation());
         System.out.println(fm.getCurrentRadioStation());
 
         fm.setCurrentRadioStation(0);
