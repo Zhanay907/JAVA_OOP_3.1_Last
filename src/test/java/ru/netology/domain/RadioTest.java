@@ -53,8 +53,50 @@ public class RadioTest {
         System.out.println(fm.getCurrentSoundVolume());
 
     }
-
     @Test
+    public void nextSoundVolume() {
+        Radio fm = new Radio(100, 0);
+
+        fm.setCurrentSoundVolume(95);
+        fm.nextSoundVolume();
+        assertEquals(96, fm.getCurrentSoundVolume());
+
+        System.out.println(fm.getCurrentSoundVolume());
+
+    } @Test
+    public void nextSoundVolume1() {
+        Radio fm = new Radio(100, 0);
+
+        fm.setCurrentSoundVolume(101);
+        fm.nextSoundVolume();
+        assertEquals(100, fm.getCurrentSoundVolume());
+
+        System.out.println(fm.getCurrentSoundVolume());
+
+    }
+    @Test
+    public void prevSoundVolume() {
+        Radio fm = new Radio(100, 0);
+
+        fm.setCurrentSoundVolume(95);
+        fm.prevSoundVolume();
+        assertEquals(94, fm.getCurrentSoundVolume());
+
+        System.out.println(fm.getCurrentSoundVolume());
+
+    }
+    @Test
+    public void prevSoundVolume1() {
+        Radio fm = new Radio(100, 0);
+
+        fm.setCurrentSoundVolume(0);
+        fm.prevSoundVolume();
+        assertEquals(0, fm.getCurrentSoundVolume());
+
+        System.out.println(fm.getCurrentSoundVolume());
+
+    }
+        @Test
     public void changRadioStation() {
         Radio fm = new Radio(5, 10, 0);
         fm.setCurrentRadioStation(-5);

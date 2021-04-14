@@ -85,8 +85,22 @@ public class Radio {
         }
         this.currentSoundVolume = currentSoundVolume;
     }
+    public void nextSoundVolume() {
+        if (currentSoundVolume + 1 > maxSoundVolume) {
+            this.currentSoundVolume = maxSoundVolume;
+        } else {
+            this.currentSoundVolume = currentSoundVolume + 1;
+        }
+    }
 
+    public void prevSoundVolume() {
+        if (currentSoundVolume - 1 < minSoundVolume) {
+            this.currentSoundVolume = minSoundVolume;
+        } else {
+            this.currentSoundVolume = currentSoundVolume - 1;
+        }
 
+    }
     public int getCurrentRadioStation() {
 
         return currentRadioStation;
